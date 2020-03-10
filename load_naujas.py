@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Load dirty data
-df = pd.read_csv('naujas.csv', encoding='latin1',  parse_dates=[0])
+df = pd.read_csv('data/naujas.csv', encoding='latin1',  parse_dates=[0])
 
 # Rename columns
 df.index.name = 'N'
@@ -20,4 +20,4 @@ for name in ['It', 'Sr', 'Temp', 'Galia', 'Apkr %', 'Kor', 'Vejo gr', 'Turbinos 
 df.dropna(axis=0, inplace=True)
 
 # Save cleaned data
-df.to_csv('naujas_clean.csv')
+df.to_csv('data/naujas_clean.csv')
